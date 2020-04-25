@@ -1,11 +1,11 @@
-husky: read.o move.o
-		g++ read.o move.o
+husky: read.o main.o
+		g++ main.o read.o -o husky
 
 read.o:
 		g++ -c read.cxx	
 
-move.o:
-		g++ -c move.cxx	
+main.o:
+		g++ -c main.cxx
 
 clean:
 		rm *.o husky
